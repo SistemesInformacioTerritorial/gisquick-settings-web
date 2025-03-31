@@ -47,7 +47,7 @@
         <layers-errors class="my-2" :errors="layersErrors" :project-info="projectInfo"/>
         <div v-if="wfsNotEnabled" class="note">
           <v-icon name="circle-i-outline"/>
-          <span class="m-2">Vector layers without WFS service enabled cannot be queryable.</span>
+          <span class="m-2">Vector layers require WFS service to be enabled for query functionality.</span>
           <v-btn class="small" color="orange" @click="enableWFS">Enable WFS</v-btn>
         </div>
       </div>
@@ -307,8 +307,12 @@ export default {
       return null
     },
     wfsNotEnabled () {
-      const vectorLayers = Object.values(this.projectInfo.layers).filter(l => l.type === 'VectorLayer')
-      return vectorLayers.length && vectorLayers.every(l => !l.options.wfs.length)
+      // Check vector layers that need WFS
+      const vectorLayersWithoutWFS = Object.values(this.projectInfo.layers).filter(l => 
+        l.type === 'VectorLayer' && l.queryable !== false && !l.options.wfs.length
+      )
+      
+      return vectorLayersWithoutWFS.length > 0
     },
     projectionValid () {
       const projCode = this.projectInfo.projection
@@ -396,7 +400,6 @@ export default {
       try {
         await this.upload.start()
         // this.saveConfig()
-
         // TODO: or maybe project info should be taken from server response
         const project = {
           name: projectName,
@@ -430,10 +433,8 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
 @import '@/card.scss';
-
 .card {
   border: 1px solid #e3e3e3;
 }

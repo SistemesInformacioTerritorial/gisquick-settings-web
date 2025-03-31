@@ -55,13 +55,13 @@ export default defineConfig(({ mode }) => ({
     proxy: {
       "/ws": {
         ws: true,
-        //target: 'ws://localhost'
-         target: 'ws://gisquick.nexusgeografics.com/'
+        target: 'ws://localhost'
+        // target: 'ws://gisquick.nexusgeografics.com/'
         // target: 'wss://dev.gisquick.org'
       },
       "/api": {
-         target: 'https://gisquick.nexusgeografics.com/'
-        //target: 'http://localhost'
+         //target: 'https://gisquick.nexusgeografics.com/'
+        target: 'http://localhost'
         // target: 'https://dev.gisquick.org',
         // target: 'https://portal.mapotip.cz:8443/',
         // changeOrigin: true,
