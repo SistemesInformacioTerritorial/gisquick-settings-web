@@ -308,11 +308,16 @@ export default {
     },
     wfsNotEnabled () {
       // Check vector layers that need WFS
-      const vectorLayersWithoutWFS = Object.values(this.projectInfo.layers).filter(l => 
-        l.type === 'VectorLayer' && l.queryable !== false && !l.options.wfs.length
-      )
+      const vectorLayersWithoutWFS = Object.values(this.projectInfo.layers).filter(l => {
+        // Only check vector layers that should be queryable
+        if (l.type === 'VectorLayer' && l.queryable !== false) {
+          // Handle cases where options or options.wfs might be undefined for newly added layers
+          return !l.options || !l.options.wfs || l.options.wfs.length === 0;
+        }
+        return false;
+      });
       
-      return vectorLayersWithoutWFS.length > 0
+      return vectorLayersWithoutWFS.length > 0;
     },
     projectionValid () {
       const projCode = this.projectInfo.projection
