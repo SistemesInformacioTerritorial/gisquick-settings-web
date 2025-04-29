@@ -1,0 +1,621 @@
+
+General
+Files
+Map
+Layers
+Topics
+Search
+Permissions
+Update
+Map
+Update ModeChoose between push and pull operation
+QGIS Project/nas_usr1.imi.bcn/USR1/1/USR/K330521/mapes/lalo-pre/culte/culte.qgs
+Gisquick Projectlalo\culturaDos
+Project changes
+QGIS project was not changed
+Show Gisquick metadata
+Files
+Gisquick Metadata
+{
+  "file":"culte.qgs",
+  "title":"",
+  "layers":{
+    "Equipaments___Llocs_de_culte_9a43ca68_10b9_4cf6_80d2_53b879bf710f":{
+      "id":"Equipaments___Llocs_de_culte_9a43ca68_10b9_4cf6_80d2_53b879bf710f",
+      "title":"Equipaments - Llocs de culte",
+      "name":"Equipaments-Llocs_de_culte",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4560000, 460000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_CAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_SUBCAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_X",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_Y",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TIPUS_INFO",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ICONA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ZOOM",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"SECCIO_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TOOLTIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TELEFON",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ADRECA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_POSTAL",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO_TRANSPORTS",
+          "type":"text",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Point",
+        "labels":true,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Equipaments___Mercats_i_centres_comercials_125fbaa7_7ab1_4ddf_ae57_caac9edf0375":{
+      "id":"Equipaments___Mercats_i_centres_comercials_125fbaa7_7ab1_4ddf_ae57_caac9edf0375",
+      "title":"Equipaments - Mercats i centres comercials",
+      "name":"Equipaments-Mercats_i_centres_comercials",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4560000, 460000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_CAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_SUBCAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_X",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_Y",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TIPUS_INFO",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ICONA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ZOOM",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"SECCIO_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TOOLTIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TELEFON",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ADRECA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_POSTAL",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO_TRANSPORTS",
+          "type":"text",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Point",
+        "labels":true,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Equipaments___Serveis_funeraris_b93ca7e3_bdff_4c61_b70f_9adefe5708d6":{
+      "id":"Equipaments___Serveis_funeraris_b93ca7e3_bdff_4c61_b70f_9adefe5708d6",
+      "title":"Equipaments - Serveis funeraris",
+      "name":"Equipaments-Serveis_funeraris",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4560000, 460000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_CAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_SUBCAPA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_X",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"COORD_Y",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TIPUS_INFO",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ICONA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ZOOM",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"SECCIO_EQUIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TOOLTIP",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"TELEFON",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ADRECA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_BARRI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM_DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_POSTAL",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"INFO_TRANSPORTS",
+          "type":"text",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Point",
+        "labels":true,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Noms_de_carrers_ea619ab3_7e3e_4841_ac79_ade71eee3b5d":{
+      "id":"Noms_de_carrers_ea619ab3_7e3e_4841_ac79_ade71eee3b5d",
+      "title":"Noms de carrers",
+      "name":"Noms_de_carrers",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4500000, 500000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"float",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NIVELL",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ID_SUBTIP",
+          "type":"float",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"NOM",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ANGLE_TXT",
+          "type":"float",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Point",
+        "labels":true,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Numeraci__postal_c06d665f_69a3_4ba6_a0ed_390335505f40":{
+      "id":"Numeraci__postal_c06d665f_69a3_4ba6_a0ed_390335505f40",
+      "title":"Numeració postal",
+      "name":"Numeracio_postal",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4500000, 500000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ETIQUETA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"ANGLE",
+          "type":"float",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Point",
+        "labels":true,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Pol_gon_de_parcel_la_be202f49_d5da_4e82_9b88_0940166bd309":{
+      "id":"Pol_gon_de_parcel_la_be202f49_d5da_4e82_9b88_0940166bd309",
+      "title":"Polígon de parcel·la",
+      "name":"Poligon_de_parcel_la",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4500000, 500000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_ILLA",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_PARC",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"PORCIO",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"SOLAR",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"REF_CDS",
+          "type":"text",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Polygon",
+        "labels":false,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    },
+    "Pol_gons_d_illa_76b14b2c_3345_4da3_89c8_8a19cc5cc1c2":{
+      "id":"Pol_gons_d_illa_76b14b2c_3345_4da3_89c8_8a19cc5cc1c2",
+      "title":"Polígons d'illa",
+      "name":"Poligons_d_illa",
+      "provider_type":"oracle",
+      "projection":"EPSG:25831",
+      "type":"VectorLayer",
+      "source_params":null,
+      "extent":[ 400000, 4500000, 500000, 4600000 ],
+      "visible":true,
+      "metadata":{ },
+      "attributes":[
+        {
+          "name":"ID",
+          "type":"text",
+          "constraints":[ "not_null", "unique" ],
+          "widget":"TextEdit"
+        },
+        {
+          "name":"DISTRICTE",
+          "type":"text",
+          "widget":"TextEdit"
+        },
+        {
+          "name":"CODI_ILLA",
+          "type":"text",
+          "widget":"TextEdit"
+        }
+      ],
+      "options":{
+        "wkb_type":"Polygon",
+        "labels":false,
+        "wfs":[ ]
+      },
+      "flags":[ ]
+    }
+  },
+  "layers_order":[ "Noms_de_carrers_ea619ab3_7e3e_4841_ac79_ade71eee3b5d", "Numeraci__postal_c06d665f_69a3_4ba6_a0ed_390335505f40", "Pol_gon_de_parcel_la_be202f49_d5da_4e82_9b88_0940166bd309", "Pol_gons_d_illa_76b14b2c_3345_4da3_89c8_8a19cc5cc1c2", "Equipaments___Llocs_de_culte_9a43ca68_10b9_4cf6_80d2_53b879bf710f", "Equipaments___Serveis_funeraris_b93ca7e3_bdff_4c61_b70f_9adefe5708d6", "Equipaments___Mercats_i_centres_comercials_125fbaa7_7ab1_4ddf_ae57_caac9edf0375" ],
+  "layers_tree":[
+    {
+      "name":"Parcel·lari",
+      "wms_name":"Parcel_lari",
+      "layers":[
+        {
+          "id":"Noms_de_carrers_ea619ab3_7e3e_4841_ac79_ade71eee3b5d"
+        },
+        {
+          "id":"Numeraci__postal_c06d665f_69a3_4ba6_a0ed_390335505f40"
+        },
+        {
+          "id":"Pol_gon_de_parcel_la_be202f49_d5da_4e82_9b88_0940166bd309"
+        },
+        {
+          "id":"Pol_gons_d_illa_76b14b2c_3345_4da3_89c8_8a19cc5cc1c2"
+        }
+      ]
+    },
+    {
+      "id":"Equipaments___Llocs_de_culte_9a43ca68_10b9_4cf6_80d2_53b879bf710f"
+    },
+    {
+      "id":"Equipaments___Serveis_funeraris_b93ca7e3_bdff_4c61_b70f_9adefe5708d6"
+    },
+    {
+      "id":"Equipaments___Mercats_i_centres_comercials_125fbaa7_7ab1_4ddf_ae57_caac9edf0375"
+    }
+  ],
+  "base_layers":[ ],
+  "composer_templates":[ ],
+  "projection":"EPSG:25831",
+  "units":{
+    "map":"meters",
+    "area":"m2",
+    "distance":"meters",
+    "factor":39.37007874,
+    "position_precision":2
+  },
+  "scales":[ ],
+  "extent":[ 400000, 4500000, 500000, 4600000 ],
+  "projections":{
+    "EPSG:25831":{
+      "is_geographic":false,
+      "proj4":"+proj=utm +zone=31 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+    }
+  },
+  "client_info":{
+    "qgis_version":"3.22.15-Białowieża",
+    "plugin_version":"2.5.7",
+    "platform":[ "Windows", "AMD64" ],
+    "directory":"//nas_usr1.imi.bcn/USR1/1/USR/K330521/mapes/lalo-pre/culte"
+  },
+  "project_hash":"0503214f9aae47b1fe757392ffb47d03ba3737b1"
+}
