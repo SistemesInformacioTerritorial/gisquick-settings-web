@@ -47,8 +47,8 @@
         <layers-errors class="my-2" :errors="layersErrors" :project-info="projectInfo"/>
         <div v-if="wfsNotEnabled" class="note">
           <v-icon name="circle-i-outline"/>
-          <span class="m-2">Vector layers require WFS service to be enabled for query functionality.</span>
-          <v-btn class="small" color="orange" @click="enableWFS">Enable WFS</v-btn>
+          <span class="m-2">Enable WFS service to make vector layers queryable.</span>
+          <v-btn class="small" color="orange" @click="enableWFS">Make Queryable</v-btn>
         </div>
       </div>
 
@@ -307,17 +307,10 @@ export default {
       return null
     },
     wfsNotEnabled () {
-      // Check vector layers that need WFS
-      const vectorLayersWithoutWFS = Object.values(this.projectInfo.layers).filter(l => {
-        // Only check vector layers that should be queryable
-        if (l.type === 'VectorLayer' && l.queryable !== false) {
-          // Handle cases where options or options.wfs might be undefined for newly added layers
-          return !l.options || !l.options.wfs || l.options.wfs.length === 0;
-        }
-        return false;
-      });
-      
-      return vectorLayersWithoutWFS.length > 0;
+      const vectorLayers = Object.values(this.projectInfo.layers).filter(l => 
+        l.type === 'VectorLayer' && l.queryable !== false
+      )
+      return vectorLayers.length && vectorLayers.some(l => !l.options.wfs.length)
     },
     projectionValid () {
       const projCode = this.projectInfo.projection
@@ -376,8 +369,14 @@ export default {
         }
       }
     },
-    enableWFS () {
-      this.$ws.request('EnableLayersWFS')
+    async enableWFS () {
+      try {
+        await this.$ws.request('EnableLayersWFS');
+        // Refresh project info to ensure UI updates correctly
+        await this.fetchProjectInfo();
+      } catch (err) {
+        console.error('Failed to enable WFS', err);
+      }
     },
     async fetchLocalFiles () {
       const task = this.$ws.request('ProjectFiles')
