@@ -308,7 +308,7 @@ export default {
     },
     wfsNotEnabled () {
       const vectorLayers = Object.values(this.projectInfo.layers).filter(l => l.type === 'VectorLayer')
-      return vectorLayers.length && vectorLayers.some(l => !l.options.wfs.length)
+      return vectorLayers.length && vectorLayers.every(l => !l.options.wfs.length)
     },
     projectionValid () {
       const projCode = this.projectInfo.projection
