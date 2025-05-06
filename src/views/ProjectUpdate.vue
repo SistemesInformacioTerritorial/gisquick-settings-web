@@ -32,7 +32,7 @@
 
       <div class="mode f-row-ac" :class="updateMode">
         <div class="f-col">
-          <span class="title f-grow uppercase">Update Mode</span>
+          <span class="title f-grow uppercase">Mode Actualització</span>
           <span class="description">Choose between push and pull operation</span>
         </div>
         <span class="f-grow"/>
@@ -89,6 +89,11 @@
             <div v-show="showProjectChanges" class="f-col">
               <qgis-layers-info :meta="projectInfo2" :classes="diffLayersClasses"/>
               <layers-errors class="my-2" :errors="layersErrors" :project-info="projectInfo"/>
+              <div v-if="wfsNotEnabled" class="note mt-2 f-row-ac">
+                <v-icon name="circle-i-outline"/>
+                <span class="m-2">Vector layers without WFS service enabled cannot be queryable.</span>
+                <v-btn class="small" color="orange" @click="enableWFS">Enable WFS</v-btn>
+              </div>
             </div>
           </v-collapsible>
           <div v-else class="f-row p-4 mx-auto">
@@ -538,6 +543,19 @@ export default {
         return this.isPushMode ? this.serverDirtyFiles : this.clientDirtyFiles
       }
       return (this.clientDirtyFiles || this.serverDirtyFiles) && [...this.clientDirtyFiles ?? [], ...this.serverDirtyFiles ?? []]
+    },
+    wfsNotEnabled() {
+      if (!this.projectInfo || !this.projectInfo.layers) {
+        return false
+      }
+      
+      // Check for vector layers without WFS enabled
+      const vectorLayers = Object.values(this.projectInfo.layers)
+        .filter(l => l.type === 'VectorLayer')
+        .filter(l => !l.error)
+      
+      // Show WFS button if we have at least one vector layer without WFS
+      return vectorLayers.length && vectorLayers.some(l => !l.options.wfs.length)
     }
   },
   activated () {
@@ -844,6 +862,19 @@ export default {
       } catch (err) {
         this.$notify.error('Project reload request failed')
       }
+    },
+    enableWFS() {
+      console.log('Enabling WFS for vector layers')
+      this.$ws.request('EnableLayersWFS')
+        .then(() => {
+          this.$notify.success('WFS successfully enabled')
+          // Refresh project info after enabling WFS
+          setTimeout(() => this.fetchClientProjectInfo(), 1000)
+        })
+        .catch(err => {
+          console.error('Error enabling WFS:', err)
+          this.$notify.error('Failed to enable WFS')
+        })
     }
   }
 }
@@ -1079,3 +1110,4 @@ hr {
   display: inline-flex;
 }
 </style>
+``` 
